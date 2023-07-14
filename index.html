@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <h1>Weather App</h1>
+
+        <div class="tab-container">
+            <p class="tab" data-userWeatehr>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+
+            <!-- ---grant location container -->
+
+            <div class="sub-container grant-location-container">
+                
+                <div class="loc-ico" >
+                    <i class="fa-sharp fa-solid fa-location-dot fa-2xl" style="color: #189020;"></i>
+                </div>
+                <!-- <img  alt="" width="80" height="80" loading="lazy"> -->
+                <p>Grant Location Access</p>
+                <p>Allow Acess to get weather Information</p>
+                <button class="btn" data-grantAcess>Grant Access</button>
+
+            </div>
+
+            <!-- ---search form -->
+            <form action="" class="form-container" data-searchForm>
+                <input placeholder="Search for City..." data-searchInput>
+                <button class="btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #eff3fb;"></i>
+                </button>
+
+            </form>
+
+
+            <!-- ---loding search container  -->
+            <div class="sub-container Loading-container ">
+                <img src="./img1/loading2.webp"  width="130" height="130" loading="lazy">
+                <p>Loading</p>
+            </div>
+
+
+            <!-- Error Page  -->
+            <div class="sub-container error-container">
+                <img src="./img1/error1.avif" width="130" height="130" loading="lazy">
+                <p>City not found</p>
+            </div>
+            <!--  show weather info  -->
+            <div class="sub-container user-info-container">
+
+                <!--  city name and flage  -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+
+                <!-- --weather description -->
+                <p data-weatherDesc></p>
+
+                <!-- weather iocn -->
+                <img data-weatherIcon>
+
+                <!-- temprature -->
+                <p data-temp></p>
+
+                <!--  3-cards parameters -->
+                <div class="parameter-contaier">
+
+                    <!-----Card-1 ------>
+                    <div class="parameter">
+                        <img src="./img1/windsped.png">
+                        <p>Windspeed</p>
+                        <p data-windspeed></p>
+                    </div>
+
+                    <!-----Card -2 -->
+                    <div class="parameter">
+                        <img src="./img1/humidity.png">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!-----Card -3  -->
+                    <div class="parameter">
+                        <img  src="./img1/cloud3.png">
+                        <p>Clouds</p>
+                        <p data-cloudiness></p>
+                    </div>
+
+                    <div class="yash"> 
+                        
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
